@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   databaseURL: "https://test-tech-53941-default-rtdb.europe-west1.firebasedatabase.app",
-  apiKey: "AIzaSyDQ58zZDP3WIaDytyJlqDNhRHkrB2cbEnE",
+  apiKey: process.env.GOOGLE_API_KEY,
   authDomain: "test-tech-53941.firebaseapp.com",
   projectId: "test-tech-53941",
   storageBucket: "test-tech-53941.appspot.com",
@@ -12,5 +12,3 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
-export { app };
