@@ -16,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex h-20 shadow-md content-center">
+          <h1 className="text-4xl text-blue-800 font-bold text-center">Find my Job</h1>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
