@@ -5,6 +5,7 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Box, TextField, Button, Typography, MenuItem, Select, FormControl, FormHelperText, InputLabel } from "@mui/material";
 import { getDatabase, push, ref, set } from "firebase/database";
 import Job from "../../../types/job";
+import { redirect } from "next/navigation";
 
 export default function JobForm() {
   const [formData, setFormData] = useState<any>({
@@ -108,7 +109,7 @@ export default function JobForm() {
             <MenuItem value="ALWAYS">OUI</MenuItem>
           </Select>
         </FormControl>
-        <TextField fullWidth label="Start Date" name="start" value={formData.start} onChange={handleInputChange} required margin="normal" />
+        <TextField fullWidth label="Date de début" name="start" value={formData.start} onChange={handleInputChange} required margin="normal" />
         <Button variant="contained" color="primary" type="submit" fullWidth sx={{ mt: 2 }}>
           Submit
         </Button>
