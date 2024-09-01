@@ -5,20 +5,11 @@ interface Job {
   descriptionPreview: string;
   details: {
       acceptRemote: string;
-      contract: string;
-      currency: string;
-      places: {
-          [key: string]: {
-              position: number;
-              updatedAt: number;
-          };
-      };
       requiredExperience: number;
       requiredExperiencePro: number;
       start: string;
   };
   helmetImageLink: string;
-  lastUpdate: number;
   publishDate: number;
   seoAlias: string;
   skillsList: {

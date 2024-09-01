@@ -17,10 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex h-20 shadow-md content-center">
-          <h1 className="text-4xl text-blue-800 font-bold text-center">Find my Job</h1>
-        </div>
-        {children}
+        <header className="bg-white shadow-md py-4">
+          <div className="container mx-auto flex items-center justify-center">
+            <a href={"/"}>
+              <h1 className="text-4xl text-blue-800 font-bold">Find My Job</h1>
+            </a>
+          </div>
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   );
